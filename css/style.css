@@ -1,2 +1,105 @@
 * {
   box-sizing: border-box; }
+
+body {
+  padding: 15px;
+  margin: 0; }
+
+#subscription_box .img {
+  border: 1px #222 solid;
+  width: 100%;
+  height: 50vw; }
+
+#subscription_box p {
+  font-size: 1.2rem;
+  margin: 0.2rem 0; }
+
+#subscription_box .price {
+  font-size: 3rem;
+  margin: 1.5rem 0;
+  color: #00729e; }
+
+#subscription_box button {
+  width: 100%;
+  height: 80px;
+  margin: 20px 0;
+  background-color: #b2d234;
+  font-size: 3rem;
+  font-weight: 700;
+  cursor: pointer; }
+
+#subscription_box .black_line {
+  width: 100%;
+  height: 1px;
+  background-color: #222; }
+
+#subscription_box p:last-child {
+  font-size: 1rem;
+  text-align: center; }
+
+#buy_form #progress {
+  display: grid;
+  margin: 40px 30px;
+  grid-template-columns: repeat(9, 1fr); }
+  #buy_form #progress .dot {
+    width: 10px;
+    height: 10px;
+    background-color: #222;
+    margin: auto auto;
+    border-radius: 50%; }
+  #buy_form #progress .point {
+    width: 30px;
+    height: 30px;
+    margin: auto auto;
+    border: 1px #222 solid;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden; }
+    #buy_form #progress .point div {
+      width: 30px;
+      height: 30px;
+      transform: translate(-1px, -1px);
+      transition: 0.33s ease-in-out;
+      border: 5px white solid;
+      background-color: #222;
+      border-radius: 50%; }
+
+#buy_form article,
+#buy_form .point {
+  transition: 0.34s ease-in-out; }
+
+#buy_form.purchase #user_information {
+  opacity: 0; }
+
+#buy_form.purchase #payment {
+  opacity: 0; }
+
+#buy_form.purchase #progress .point:nth-child(5) div {
+  transform: translateX(-34.5vw); }
+
+#buy_form.purchase #progress .point:last-child div {
+  transform: translateX(-69vw); }
+
+#buy_form.user_information #purchase {
+  opacity: 0; }
+
+#buy_form.user_information #payment {
+  opacity: 0; }
+
+#buy_form.user_information #progress .point:first-child div {
+  transform: translateX(34.5vw); }
+
+#buy_form.user_information #progress .point:last-child div {
+  transform: translateX(-34.5vw); }
+
+#buy_form.payment #purchase {
+  opacity: 0; }
+
+#buy_form.payment #user_information {
+  opacity: 0; }
+
+#buy_form.payment #progress .point:first-child div {
+  transform: translateX(69vw); }
+
+#buy_form.payment #progress .point:nth-child(5) div {
+  transform: translateX(34.5vw); }
