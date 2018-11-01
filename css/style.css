@@ -106,6 +106,23 @@ body {
     text-align: center;
     background-color: #00729e;
     color: #fff; }
+  #buy_form #purchase .item_container {
+    width: 60vw;
+    height: 60vw;
+    border: 2px solid black;
+    padding: 10px;
+    background-color: white;
+    overflow: hidden;
+    margin: 0 auto; }
+    #buy_form #purchase .item_container p {
+      font-size: 1.7rem;
+      text-align: center; }
+    #buy_form #purchase .item_container .img {
+      width: 100%;
+      height: 100%;
+      background-image: url(../assets/drone.png);
+      background-size: contain;
+      background-repeat: no-repeat; }
   #buy_form #progress {
     display: grid;
     margin: 20px 30px;
