@@ -214,18 +214,22 @@ body {
           left: 7vw;
         }
       }
-      div:first-child {
+      #two_magazines {
         background-image: url(../assets/2numre.png);
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
       }
 
-      div:nth-child(2) {
+      #six_magazines {
         background-image: url(../assets/seksnumre.png);
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
+      }
+
+      .active {
+        border: 3px solid $blue;
       }
     }
 

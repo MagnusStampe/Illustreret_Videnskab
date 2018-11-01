@@ -149,16 +149,18 @@ body {
         position: absolute;
         bottom: 0;
         left: 7vw; }
-    #buy_form #purchase .antal_numre_container div:first-child {
+    #buy_form #purchase .antal_numre_container #two_magazines {
       background-image: url(../assets/2numre.png);
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat; }
-    #buy_form #purchase .antal_numre_container div:nth-child(2) {
+    #buy_form #purchase .antal_numre_container #six_magazines {
       background-image: url(../assets/seksnumre.png);
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat; }
+    #buy_form #purchase .antal_numre_container .active {
+      border: 3px solid #00729e; }
   #buy_form #purchase p {
     font-size: 1rem;
     text-align: center;

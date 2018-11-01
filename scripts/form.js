@@ -3,6 +3,8 @@
 const section = document.querySelector("#buy_form");
 const returnBtn = document.querySelector("#return");
 const confirmBtn = document.querySelector("#confirm");
+const twoMagazinez = document.querySelector("#two_magazines");
+const sixMagazinez = document.querySelector("#six_magazines");
 
 document.addEventListener("DOMContentLoaded", init);
 
@@ -13,6 +15,8 @@ function init() {
   confirmBtn.addEventListener("click", function(event) {
     event.preventDefault();
   });
+  twoMagazinez.addEventListener("click", pickTwoMagazines);
+  sixMagazinez.addEventListener("click", pickSixMagazines);
 
   function goLeft() {
     console.log("goLeft()");
@@ -133,4 +137,14 @@ function init() {
       }
     }
   }
+}
+
+function pickTwoMagazines() {
+  sixMagazinez.classList.remove("active");
+  twoMagazinez.classList.add("active");
+}
+
+function pickSixMagazines() {
+  twoMagazinez.classList.remove("active");
+  sixMagazinez.classList.add("active");
 }
