@@ -30,12 +30,95 @@
                 <div></div>
             </div>
         </div>
-        <form>
-            <article id="purchase">Purchase form</article>
-            <article id="user_information" class="right">User information form</article>
-            <article id="payment" class="right">Payment form</article>
+        <form action="submit.html">
+            <!-- 1. del af form -->
+            <article id="purchase">
+                <div class="jacket_container">
+                    <div class="img"></div>
+                    <div class="small">S</div>
+                    <div class="medium selected">M</div>
+                    <div class="large">L</div>
+                </div>
+                <input type="hidden" value="m">
+                <div class="antal_numre_container">
+                    <div>
+                        <p>2 nr.</p>
+                        <img src="">
+                        <p>109kr</p>
+                    </div>
+                    <div>
+                        <p>6 nr.</p>
+                        <img src="">
+                        <p>209kr</p>
+                    </div>
+                    <input type="hidden" value="nr2">
+                </div>
+                <p>Efter tilbud:</p>
+                <p>Abonnement, 4 numre, 315,80kr</p>
+                <p>18 numre om året</p>
+            </article>
+            <!-- 2. del af form -->
+            <article id="user_information">
+                <h2>Brugeroplysninger</h2>
+                <p>Fornavn</p>
+                <input type="text" name="firstname">
+                <p>Efternavn</p>
+                <input type="text" name="lastname">
+                <p>Adresse</p>
+                <input type="text" name="adress">
+                <div class="zip_city_container">
+                    <p>Post nr.</p>
+                    <p>By</p>
+                    <input type="number" name="zip_code">
+                    <input type="text" name="city" class="city">
+                </div>
+                <p>E-mail</p>
+                <input type="email" name="email">
+                <p>Telefon nr.</p>
+                <input type="text" name="phone">
+            </article>
+            <!-- 3. del af form -->
+            <article id="payment">
+                <h2>Betalingsform</h2>
+                <div class="pay_type_container">
+
+                    <input type="radio" name="pay_type" value="visa" checked>
+                    <label for="visa">Visa / Dankort</label>
+                    <div><img src="img/dankort.png"><img src="img/forbrugsforeningen.jpg"> </div>
+
+                    <input type="radio" name="pay_type" value="credit">
+                    <label for="credit">Kreditkort</label>
+                    <div>
+                        <img src="img/visa.png" class="visa">
+                        <img src="img/mastercard.png">
+                        <img src="img/visa-electron.png">
+                        <img src="img/maestro.png">
+                    </div>
+
+                    <input type="radio" name="pay_type" value="mobile">
+                    <label for="mobile">Mobilepay</label>
+                    <div><img src="img/mobile-pay.png"></div>
+
+                    <input type="radio" name="pay_type" value="giro">
+                    <label for="visa">Girokort (+10kr)</label>
+                    <img>
+                </div>
+                <h2>Visa / Dankort</h2>
+                <div class="pay_info_container">
+                    <p>Kortnummer</p>
+                    <input type="number" name="card_number">
+                    <p>md / år</p>
+                    <p>cvv</p>
+                    <div class="month_year">
+                        <input type="number" name="month">
+                        <p>/</p>
+                        <input type="number" name="year">
+                    </div>
+                    <input type="number" name="cvv">
+                </div>
+            </article>
+            <input id="confirm" type="submit" value="Næste">
         </form>
-        <button id="confirm">Næste</button>
 
     </section>
 

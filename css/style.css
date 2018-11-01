@@ -3,7 +3,8 @@
 
 body {
   padding: 15px;
-  margin: 0; }
+  margin: 0;
+  overflow: hidden scroll; }
 
 #subscription_box .img {
   border: 1px #222 solid;
@@ -37,69 +38,130 @@ body {
   font-size: 1rem;
   text-align: center; }
 
-#buy_form #progress {
-  display: grid;
-  margin: 40px 30px;
-  grid-template-columns: repeat(9, 1fr); }
-  #buy_form #progress .dot {
-    width: 10px;
-    height: 10px;
-    background-color: #222;
-    margin: auto auto;
-    border-radius: 50%; }
-  #buy_form #progress .point {
-    width: 30px;
-    height: 30px;
-    margin: auto auto;
-    border: 1px #222 solid;
-    border-radius: 50%;
-    position: relative;
-    overflow: hidden; }
-    #buy_form #progress .point div {
+#buy_form {
+  position: relative;
+  height: 90vh;
+  margin: 0 20px; }
+  #buy_form #return {
+    width: 130px;
+    height: 25px;
+    text-align: center;
+    background-color: #00729e;
+    color: #fff; }
+  #buy_form #progress {
+    display: grid;
+    margin: 20px 30px;
+    grid-template-columns: repeat(9, 1fr); }
+    #buy_form #progress .dot {
+      width: 10px;
+      height: 10px;
+      background-color: #222;
+      margin: auto auto;
+      border-radius: 50%; }
+    #buy_form #progress .point {
       width: 30px;
       height: 30px;
-      transform: translate(-1px, -1px);
-      transition: 0.33s ease-in-out;
-      border: 5px white solid;
-      background-color: #222;
-      border-radius: 50%; }
-
-#buy_form article,
-#buy_form .point {
-  transition: 0.34s ease-in-out; }
-
-#buy_form.purchase #user_information {
-  opacity: 0; }
-
-#buy_form.purchase #payment {
-  opacity: 0; }
-
-#buy_form.purchase #progress .point:nth-child(5) div {
-  transform: translateX(-34.5vw); }
-
-#buy_form.purchase #progress .point:last-child div {
-  transform: translateX(-69vw); }
-
-#buy_form.user_information #purchase {
-  opacity: 0; }
-
-#buy_form.user_information #payment {
-  opacity: 0; }
-
-#buy_form.user_information #progress .point:first-child div {
-  transform: translateX(34.5vw); }
-
-#buy_form.user_information #progress .point:last-child div {
-  transform: translateX(-34.5vw); }
-
-#buy_form.payment #purchase {
-  opacity: 0; }
-
-#buy_form.payment #user_information {
-  opacity: 0; }
-
-#buy_form.payment #progress .point:first-child div {
-  transform: translateX(69vw); }
-
-#buy_form.payment #progress .point:nth-child(5) div {
-  transform: translateX(34.5vw); }
+      margin: auto auto;
+      border: 1px #222 solid;
+      border-radius: 50%;
+      position: relative;
+      overflow: hidden; }
+      #buy_form #progress .point div {
+        width: 30px;
+        height: 30px;
+        transform: translate(-1px, -1px);
+        transition: 0.33s ease-in-out;
+        border: 5px #fff solid;
+        background-color: #222;
+        border-radius: 50%; }
+  #buy_form h2 {
+    margin: 5px 0; }
+  #buy_form h3 {
+    margin: 10px 0 0 0;
+    font-size: 0.8rem; }
+  #buy_form p {
+    font-size: 0.8rem;
+    margin: 8px 0 0 0; }
+  #buy_form article,
+  #buy_form .point {
+    transition: 0.34s ease-in-out; }
+  #buy_form article {
+    position: absolute;
+    width: 100%; }
+  #buy_form .zip_city_container {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    width: 100%; }
+  #buy_form input[type="submit"] {
+    position: absolute;
+    bottom: 0px;
+    left: 10%;
+    width: 80%;
+    height: 60px;
+    font-size: 1.8rem;
+    color: #fff;
+    background-color: #00729e;
+    border: 1px #555 solid;
+    border-radius: 2px; }
+  #buy_form input[type="text"],
+  #buy_form input[type="email"],
+  #buy_form input[type="number"] {
+    width: 100%;
+    border: 1px #555 solid;
+    border-radius: 2px;
+    padding: 4px; }
+  #buy_form input[name="zip_code"] {
+    width: 95%; }
+  #buy_form .pay_type_container {
+    display: grid;
+    grid-template-columns: 2fr 8fr 8fr; }
+    #buy_form .pay_type_container img {
+      height: 1rem;
+      margin: 2px;
+      float: right; }
+    #buy_form .pay_type_container .visa {
+      height: 0.6rem;
+      margin-bottom: 5px; }
+  #buy_form .pay_info_container {
+    display: grid;
+    grid-template-columns: 100px auto;
+    grid-column-gap: 40px; }
+    #buy_form .pay_info_container p:first-child {
+      grid-area: 1 / 1 / 2 / 3; }
+    #buy_form .pay_info_container input:nth-child(2) {
+      grid-area: 2 / 1 / 3 / 3; }
+    #buy_form .pay_info_container input:last-child {
+      width: 50px; }
+    #buy_form .pay_info_container .month_year input {
+      display: inline-block;
+      width: 40px; }
+    #buy_form .pay_info_container .month_year p {
+      display: inline-block; }
+  #buy_form.purchase #user_information {
+    transform: translateX(100vw); }
+  #buy_form.purchase #payment {
+    transform: translateX(100vw); }
+  #buy_form.purchase #progress .point:first-child {
+    border: 2px solid #00729e; }
+    #buy_form.purchase #progress .point:first-child div {
+      transform: translate(-2px, -2px); }
+  #buy_form.purchase #progress .point:nth-child(5) div {
+    transform: translateX(-34.5vw); }
+  #buy_form.purchase #progress .point:last-child div {
+    transform: translateX(-69vw); }
+  #buy_form.user_information #purchase {
+    transform: translateX(-100vw); }
+  #buy_form.user_information #payment {
+    transform: translateX(100vw); }
+  #buy_form.user_information #progress .point:first-child div {
+    transform: translateX(34.5vw); }
+  #buy_form.user_information #progress .point:last-child div {
+    transform: translateX(-34.5vw); }
+  #buy_form.payment #purchase {
+    transform: translateX(-100vw); }
+  #buy_form.payment #user_information {
+    transform: translateX(-100vw); }
+  #buy_form.payment #progress .point:first-child div {
+    transform: translateX(69vw); }
+  #buy_form.payment #progress .point:nth-child(5) div {
+    transform: translateX(34.5vw); }

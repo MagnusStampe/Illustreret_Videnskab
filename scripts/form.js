@@ -10,6 +10,9 @@ function init() {
   console.log("init()");
   returnBtn.addEventListener("click", goLeft);
   confirmBtn.addEventListener("click", goRight);
+  confirmBtn.addEventListener("click", function(event) {
+    event.preventDefault();
+  });
 }
 
 function goLeft() {
@@ -37,7 +40,7 @@ function goLeft() {
     section.classList.add("user_information");
 
     //Confirm button
-    confirmBtn.textContent = "Næste";
+    confirmBtn.value = "Næste";
   }
 }
 
@@ -54,7 +57,7 @@ function goRight() {
 
     //Return button
     returnBtn.textContent = "Tilbage";
-    document.querySelector("#return_a").setAttribute("href", "#buy_form");
+    document.querySelector("#return_a").setAttribute("href", "#");
   } else if (section.classList.value === "user_information") {
     //FORM 2 to 3
     console.log("User Information to Payment");
@@ -64,13 +67,8 @@ function goRight() {
     section.classList.add("payment");
 
     //Confirm button
-    confirmBtn.textContent = "Gennemfør betaling";
+    confirmBtn.value = "Gennemfør betaling";
   } else if (section.classList.value === "payment") {
-    //FORM 3 to 4
-    console.log("Payment to Checkout");
-
-    //Class setup
-    section.classList.remove("payment");
-    section.classList.add("checkout");
+    document.querySelector("#buy_form form").submit();
   }
 }
