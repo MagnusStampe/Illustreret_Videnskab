@@ -108,6 +108,8 @@ body {
     color: #fff;
     font-size: 0.8rem;
     font-weight: 600; }
+    #buy_form #return:hover {
+      background-color: #006085; }
   #buy_form #purchase p:first-child,
   #buy_form #purchase p:nth-child(4) {
     font-size: 1.5rem;
@@ -206,6 +208,10 @@ body {
     display: grid;
     grid-template-columns: 25% 75%;
     width: 100%; }
+  #buy_form input.invalid:invalid:not(fokus) {
+    border: 1px solid red; }
+  #buy_form input:empty {
+    border: 1px solid blue; }
   #buy_form input[type="submit"] {
     position: absolute;
     top: 480px;
@@ -217,6 +223,8 @@ body {
     background-color: #00729e;
     border: 1px #555 solid;
     border-radius: 2px; }
+    #buy_form input[type="submit"]:hover {
+      background-color: #006085; }
   #buy_form input[type="text"],
   #buy_form input[type="email"],
   #buy_form input[type="number"] {
@@ -279,3 +287,17 @@ body {
     transform: translateX(69vw); }
   #buy_form.payment #progress .point:nth-child(5) div {
     transform: translateX(34.5vw); }
+
+#thanks h2,
+#thanks p {
+  text-align: center; }
+
+#thanks button {
+  width: 70%;
+  margin-left: 15%;
+  height: 2.5rem;
+  background-color: #00729e;
+  color: #fff;
+  font-size: 1.1rem; }
+  #thanks button:hover {
+    background-color: #006085; }
