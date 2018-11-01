@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: "Malayalam Sangam MN"; }
+  font-family: "Malayalam Sangam MN", sans-serif; }
 
 body {
   padding: 15px;
@@ -15,28 +15,28 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  overflow: hidden;
-  margin-bottom: 1vh; }
+  overflow: hidden; }
 
 #subscription_box .title {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 1.6rem;
   text-align: center;
-  margin: 2vw 0; }
+  margin: 2vw 0 4vw 0; }
 
 #subscription_box .img {
   position: relative;
   border: 1px #222 solid;
   width: 100%;
   height: 50vw;
+  margin-bottom: 6vw;
   background-image: url(../assets/farson.png);
   background-position: center;
   background-size: cover; }
 
 #subscription_box .discount {
   position: absolute;
-  bottom: -25px;
-  left: 15px;
+  top: -10px;
+  right: 15px;
   height: 70px;
   width: 70px;
   border-radius: 50%;
@@ -53,7 +53,7 @@ body {
   margin: 0.2rem 0; }
 
 #subscription_box .items {
-  margin: 5vh 0 0 4vw; }
+  margin: 1vw 0 0 4vw; }
 
 #subscription_box .price {
   font-size: 3.4rem;
@@ -105,24 +105,62 @@ body {
     height: 25px;
     text-align: center;
     background-color: #00729e;
-    color: #fff; }
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 600; }
+  #buy_form #purchase p:first-child,
+  #buy_form #purchase p:nth-child(4) {
+    font-size: 1.5rem;
+    text-align: initial;
+    font-weight: 600; }
   #buy_form #purchase .item_container {
-    width: 60vw;
-    height: 60vw;
-    border: 2px solid black;
-    padding: 10px;
-    background-color: white;
-    overflow: hidden;
-    margin: 0 auto; }
+    width: 30vw;
+    height: 30vw;
+    padding-bottom: 20px;
+    margin: 2vw auto; }
     #buy_form #purchase .item_container p {
-      font-size: 1.7rem;
+      font-size: 1.3rem;
       text-align: center; }
     #buy_form #purchase .item_container .img {
       width: 100%;
-      height: 100%;
+      height: 90%;
       background-image: url(../assets/drone.png);
+      background-position: center;
       background-size: contain;
       background-repeat: no-repeat; }
+  #buy_form #purchase .antal_numre_container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center; }
+    #buy_form #purchase .antal_numre_container div {
+      position: relative;
+      width: 30vw;
+      height: 30vw;
+      border: 1px solid grey;
+      background-color: white;
+      margin: 0 2vw; }
+      #buy_form #purchase .antal_numre_container div p {
+        font-size: 1.5rem;
+        text-align: center;
+        margin: 0; }
+      #buy_form #purchase .antal_numre_container div p:last-child {
+        position: absolute;
+        bottom: 0;
+        left: 7vw; }
+    #buy_form #purchase .antal_numre_container div:first-child {
+      background-image: url(../assets/2numre.png);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat; }
+    #buy_form #purchase .antal_numre_container div:nth-child(2) {
+      background-image: url(../assets/seksnumre.png);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat; }
+  #buy_form #purchase p {
+    font-size: 1rem;
+    text-align: center;
+    margin: 0; }
   #buy_form #progress {
     display: grid;
     margin: 20px 30px;
@@ -138,6 +176,7 @@ body {
       height: 30px;
       margin: auto auto;
       border: 1px #222 solid;
+      background-color: #fff;
       border-radius: 50%;
       position: relative;
       overflow: hidden; }
@@ -169,7 +208,7 @@ body {
     width: 100%; }
   #buy_form input[type="submit"] {
     position: absolute;
-    bottom: 0px;
+    top: 480px;
     left: 10%;
     width: 80%;
     height: 60px;

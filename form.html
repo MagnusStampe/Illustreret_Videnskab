@@ -33,20 +33,22 @@
         <form action="submit.html">
             <!-- 1. del af form -->
             <article id="purchase">
+                <p>Tilpas dit tilbud</p>
                 <div class="item_container">
                     <p>Drone</p>
                     <div class="img"></div>
                 </div>
                 <input type="hidden" value="m">
+                <p>Vælg antal magasiner</p>
                 <div class="antal_numre_container">
                     <div>
                         <p>2 nr.</p>
-                        <img src="">
+
                         <p>109kr</p>
                     </div>
                     <div>
                         <p>6 nr.</p>
-                        <img src="">
+
                         <p>209kr</p>
                     </div>
                     <input type="hidden" value="nr2">
@@ -59,21 +61,21 @@
             <article id="user_information">
                 <h2>Brugeroplysninger</h2>
                 <p>Fornavn</p>
-                <input type="text" name="firstname">
+                <input type="text" name="firstname" required>
                 <p>Efternavn</p>
-                <input type="text" name="lastname">
+                <input type="text" name="lastname" required>
                 <p>Adresse</p>
-                <input type="text" name="adress">
+                <input type="text" name="adress" required>
                 <div class="zip_city_container">
                     <p>Post nr.</p>
                     <p>By</p>
-                    <input type="number" name="zip_code">
-                    <input type="text" name="city" class="city">
+                    <input type="number" name="zip_code" required>
+                    <input type="text" name="city" class="city" required>
                 </div>
                 <p>E-mail</p>
-                <input type="email" name="email">
+                <input type="email" name="email" required>
                 <p>Telefon nr.</p>
-                <input type="text" name="phone">
+                <input type="text" name="phone" required>
             </article>
             <!-- 3. del af form -->
             <article id="payment">
@@ -115,7 +117,7 @@
                     <input type="number" name="cvv">
                 </div>
             </article>
-            <input id="confirm" type="submit" value="Næste">
+            <input id="confirm" type="submit" value="N&aelig;ste">
         </form>
 
     </section>

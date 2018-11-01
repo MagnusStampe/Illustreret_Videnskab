@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: "Malayalam Sangam MN";
+  font-family: "Malayalam Sangam MN", sans-serif;
 }
 
 $green: #b2d234;
@@ -28,8 +28,6 @@ body {
     background-size: contain;
 
     overflow: hidden;
-
-    margin-bottom: 1vh;
   }
 
   .title {
@@ -39,7 +37,7 @@ body {
     font-size: 1.6rem;
     text-align: center;
 
-    margin: 2vw 0;
+    margin: 2vw 0 4vw 0;
   }
   .img {
     position: relative;
@@ -49,6 +47,8 @@ body {
     width: 100%;
     height: 50vw;
 
+    margin-bottom: 6vw;
+
     background-image: url(../assets/farson.png);
     background-position: center;
     background-size: cover;
@@ -57,8 +57,8 @@ body {
   .discount {
     position: absolute;
 
-    bottom: -25px;
-    left: 15px;
+    top: -10px;
+    right: 15px;
     height: 70px;
     width: 70px;
     border-radius: 50%;
@@ -80,7 +80,7 @@ body {
   }
 
   .items {
-    margin: 5vh 0 0 4vw;
+    margin: 1vw 0 0 4vw;
   }
 
   .price {
@@ -148,32 +148,88 @@ body {
     text-align: center;
     background-color: $blue;
     color: $white;
+    font-size: 0.8rem;
+    font-weight: 600;
   }
 
   #purchase {
-    .item_container {
-      width: 60vw;
-      height: 60vw;
-      border: 2px solid black;
-      padding: 10px;
-      background-color: white;
-      overflow: hidden;
+    p:first-child,
+    p:nth-child(4) {
+      font-size: 1.5rem;
+      text-align: initial;
+      font-weight: 600;
+    }
 
-      margin: 0 auto;
+    .item_container {
+      width: 30vw;
+      height: 30vw;
+      padding-bottom: 20px;
+
+      margin: 2vw auto;
 
       p {
-        font-size: 1.7rem;
+        font-size: 1.3rem;
         text-align: center;
       }
 
       .img {
         width: 100%;
-        height: 100%;
+        height: 90%;
         background-image: url(../assets/drone.png);
-
+        background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
       }
+    }
+
+    .antal_numre_container {
+      display: flex;
+      flex-wrap: nowrap;
+
+      justify-content: center;
+
+      div {
+        position: relative;
+        width: 30vw;
+        height: 30vw;
+
+        border: 1px solid grey;
+        background-color: white;
+
+        margin: 0 2vw;
+
+        p {
+          font-size: 1.5rem;
+          text-align: center;
+
+          margin: 0;
+        }
+
+        p:last-child {
+          position: absolute;
+          bottom: 0;
+          left: 7vw;
+        }
+      }
+      div:first-child {
+        background-image: url(../assets/2numre.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+      div:nth-child(2) {
+        background-image: url(../assets/seksnumre.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+
+    p {
+      font-size: 1rem;
+      text-align: center;
+      margin: 0;
     }
   }
 
@@ -193,6 +249,7 @@ body {
       height: 30px;
       margin: auto auto;
       border: 1px $black solid;
+      background-color: $white;
       border-radius: 50%;
       position: relative;
       overflow: hidden;
@@ -243,7 +300,7 @@ body {
 
   input[type="submit"] {
     position: absolute;
-    bottom: 0px;
+    top: 480px;
     left: 10%;
 
     width: 80%;
