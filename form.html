@@ -69,7 +69,7 @@
                 <div class="zip_city_container">
                     <p>Post nr.</p>
                     <p>By</p>
-                    <input type="number" name="zip_code" required>
+                    <input type="number" name="zip_code" max="9999" required>
                     <input type="text" name="city" class="city" required>
                 </div>
                 <p>E-mail</p>
@@ -106,15 +106,15 @@
                 <h2>Visa / Dankort</h2>
                 <div class="pay_info_container">
                     <p>Kortnummer</p>
-                    <input type="number" name="card_number">
+                    <input type="number" name="card_number" required>
                     <p>md / år</p>
                     <p>cvv</p>
                     <div class="month_year">
-                        <input type="number" name="month">
+                        <input type="number" name="month" required>
                         <p>/</p>
-                        <input type="number" name="year">
+                        <input type="number" name="year" required>
                     </div>
-                    <input type="number" name="cvv">
+                    <input type="number" name="cvv" min="100" max="999" required>
                 </div>
             </article>
             <input id="confirm" type="submit" value="N&aelig;ste">
